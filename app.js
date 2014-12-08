@@ -34,6 +34,6 @@ app.get('/users', user.list);
 app.get('/gumball/:id',restCall.getCall);
 app.put('/gumball/:id',restCall.putCall);
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), app.get('ip_address'),function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
